@@ -41,6 +41,7 @@ const colors = [
     const randomColor = randomIntegerFromInterval(0, colors.length-1);
 
     refs.bodyStyle.style.backgroundColor = colors[randomColor];
+     console.log(colors[randomColor])
     
   }
 
