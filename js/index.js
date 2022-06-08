@@ -32,6 +32,8 @@ const colors = [
        clearInterval(timeoutId)
    }
 
+   
+   let counter = null;
 
   function onColorSwitch() {
     const randomIntegerFromInterval = (min, max) => {
@@ -40,7 +42,13 @@ const colors = [
 
     const randomColor = randomIntegerFromInterval(0, colors.length-1);
 
+    if(counter === randomColor){
+      return onColorSwitch()
+    }
+
     refs.bodyStyle.style.backgroundColor = colors[randomColor];
+
+    counter = randomColor;
     
   }
 
